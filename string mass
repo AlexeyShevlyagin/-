@@ -1,0 +1,20 @@
+package Practic2.Practik21.String_mass;
+
+public class string_mass {
+    public static void main(String[] args) {
+        String[] words = new String[]{"Late", "am", "I", "Sorry"};
+        for (int j = 0; j < words.length; j++) {
+            System.out.print(words[j]+" ");
+        }
+        System.out.print("\n");
+        String one_word;
+        for (int i = 0; i < words.length / 2; i++) {
+            one_word = words[i];
+            words[i] = words[words.length - i - 1];
+            words[words.length - i - 1] = one_word;
+        }
+        for (int j = 0; j < words.length; j++) {
+            System.out.print(words[j]+" ");
+        }
+    }
+}
