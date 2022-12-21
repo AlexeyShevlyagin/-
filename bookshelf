@@ -1,0 +1,48 @@
+package Practic2.Practik21;
+
+import java.util.Scanner;
+
+public class bookshelf {
+    private static final int Length = 4;
+    public book[] shelf = new book[Length];
+
+    public void set_book() {
+        for (int i = 0; i < shelf.length; i++) {
+            Scanner sc = new Scanner(System.in);
+            book A = new book();
+            System.out.println("введите название книги");
+            String name_book = sc.next();
+            System.out.println("введите имя автора книги");
+            String autor = sc.next();
+            System.out.println("введите Год написания книги");
+            int date = sc.nextInt();
+            System.out.println("введите типографический номер книги");
+            int number = sc.nextInt();
+            A.setAuthor(autor);
+            A.setDate_of_writing(date);
+            A.setNumber(number);
+            A.setName(name_book);
+            shelf[i] = A;
+        }
+        int B = 0;
+        for (int i =0; i< shelf.length; i++){
+            for (int j =i; j< shelf.length; j++){
+                if (shelf[j].getDate_of_writing() < shelf[i].getDate_of_writing()){
+                    B = shelf[i].getDate_of_writing();
+                    shelf[i].setDate_of_writing(shelf[j].getDate_of_writing());
+                    shelf[j].setDate_of_writing(B);
+                }
+            }
+        }
+        for (int i = 0; i < shelf.length; i++) System.out.println(shelf[i] + " ");
+    }
+    public void Get_max_and_min_search(){
+//        int  max = shelf[0].getDate_of_writing();
+//        int  min = shelf[0].getDate_of_writing();
+//        for (int i=0; i< shelf.length; i++){
+//           if (shelf[i].getDate_of_writing()>max) max = shelf[i].getDate_of_writing();
+//           if (shelf[i].getDate_of_writing()<min) min = shelf[i].getDate_of_writing();
+//        }
+        System.out.println(shelf[0].getName() + " "+ shelf[Length-1].getName());
+    }
+}
