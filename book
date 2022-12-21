@@ -1,0 +1,45 @@
+package Practic2.Practik21;
+
+public class book {
+private String name, author;
+private int number,date_of_writing;
+    book() {
+        number=date_of_writing=0;
+        name=author="no name";
+    }
+
+    public int getNumber() {
+        return number;
+    }
+
+    public String getAuthor() {
+        return author;
+    }
+
+    public int getDate_of_writing() {
+        return date_of_writing;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public void setDate_of_writing(int date_of_writing) {
+        this.date_of_writing = date_of_writing;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+    public String toString() {
+        return "name of the book : " + name + " name of the author : " + author + " year of writing : "+ date_of_writing + " typographic number : "+ number;
+    }
+}
