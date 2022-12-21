@@ -1,0 +1,9 @@
+package Practic2.Practik21;
+
+public class TestBook {
+    public static void main(String[] args) {
+        bookshelf A = new bookshelf() ;
+        A.set_book();
+        A.Get_max_and_min_search();
+    }
+ }
